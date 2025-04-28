@@ -1,0 +1,41 @@
+.containetr{
+height: 100vh;
+width:100vw ;
+background-color: antiquewhite;
+perspective: 700px;
+}
+
+
+
+.box{
+height: 300px ;
+width: 300px;
+background-color: rgb(210, 66, 18);
+transform: translate3d(20px,30px,40px);
+animation: animation 1s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+
+}
+button:hover{
+    color: brown;
+    
+    background-color: aqua;
+}
+
+button{
+color: blue;
+background-color: burlywood;
+
+transition: all ease-in 3s;
+    }
+
+
+    /* animation*/
+@keyframes animation{
+    from{background-color: yellow;}
+}
+to{
+    background-color: green;
+}
+
+
+
