@@ -874,7 +874,7 @@
 
 // for(let i = 0; i<str.length ; i++){
 //      if(str[i].startsWith(s)) count++
-  
+
 // }
 // console.log(count);
 
@@ -911,9 +911,9 @@
 // for(let i = 0 ; freqarr.length ; i++){
 //       if(freqarr[i]>0){
 //         console.log(String.fromCharCode(i) + " = "+  freqarr[i]);
-        
+
 //       }    
- 
+
 // }
 
 
@@ -927,11 +927,11 @@
 //     let ascii = str1.charCodeAt(i) ;
 //     arr[ascii] = arr[ascii]+1 ;
 //  }
- 
+
 //  for(let i = 0; i<str2.length ; i++){
 //        let ascii = str2.charCodeAt(i) ;
 //        arr[ascii] = arr[ascii] - 1 ;
- 
+
 //  }
 //  for(let i = 0 ; i<arr.length ; i++){
 //            if(arr[i]!=0){
@@ -996,7 +996,7 @@
 // for(let i = 0 ; i<stones.length; i++){
 //   let ch = stones.charAt(i) ;
 //   if(set.has(ch)) count++
-  
+
 // }
 
 // console.log(count);
@@ -1010,7 +1010,7 @@
 //     map.set(ch,map.get (ch)+1)
 //   }
 // else  map.set(ch , 1)
-  
+
 // }
 
 // console.log(map);
@@ -1041,9 +1041,9 @@
 //    if(map.has(ch)) {
 //     console.log(ch);
 //     break ; }
-    
+
 //    else map.set(ch , i) ;
-   
+
 // }
 
 
@@ -1066,7 +1066,7 @@
 // let names = ["tom" , "jerry" , "spike"] ;
 // let height = [160 , 150 , 170] ;
 // let map = new Map() ;
-                                                      
+
 // for(let i = 0; i<height.length ; i++){
 //     map.set(height[i] , names[i])
 // }
@@ -1088,16 +1088,16 @@
 
 // for(let i = 0; i<arr.length; i++){
 //     for(let j=0; j<arr[i].length; j++){
-         
+
 //         if(i===j) {
 //             leftsum = leftsum + arr[i][j]
 //         }
-        
+
 //     if(i + j === arr.length-1){
 //         rightsum = rightsum + arr[i][j]
 //     }
 //     }
-    
+
 // }
 
 
@@ -1121,8 +1121,8 @@
 // if(a==0) return ;
 // ab(a-1)
 //     console.log(a);
-    
-  
+
+
 // }
 
 
@@ -1142,7 +1142,7 @@
 
 // function ab(n , first , second){
 //     if(n==0) return
-    
+
 //     third = first+second
 //     console.log(third);   
 //     first = second 
@@ -1152,7 +1152,7 @@
 // }
 
 
-// let n = 4 ;
+// let n = 8 ;
 
 // function sumfab(n){
 //     if(n==0) return 0  ;
@@ -1190,65 +1190,151 @@
 //       reverse(n)
 // }
 
-let matrix = [ [ 1, 2, 3 ], [ 4, 5, 6 ], [ 7, 8, 9 ] ] ;
 
 
-for(let i = 0 ; i<matrix.length; i++){
-    for(let j = i+1 ; j<matrix[i].length ; j++){
 
-        [matrix[i][j], matrix[j][i]] = [matrix[j][i], matrix[i][j]]
 
-    }
-}
+// let n = 1234 ;
 
+// function sod(n){
+//       if(n<10) return n 
 
-console.log(matrix);
+// return n%10 + sod (Math.floor(n/10))
+// }
 
+// console.log(sod(n));
 
 
 
 
+// let n = 624;
+// function reverse(n , rev) {
+//     if (n === 0) return rev;
+//     return  reverse(Math.floor(n/10) , (rev * 10 )+ (n%10))
+// }
+// console.log(reverse(n , 0));
 
+// leetcode 1979. Find the greatest common divisor
 
+// let nums = [42 , 54 , 28 , 33 , 29 ] ;
 
 
+// let biggest = 0 ; 
+// for(let i = 0 ; i<nums.length; i++){
+//     if(nums[i]>biggest) biggest = nums[i]  ;
+// }
 
 
+// let smallest = Infinity ;
+// for(let i = 0 ; i<nums.length; i++){
+//     if(nums[i]<smallest) smallest = nums[i] ; 
+// }
 
-let n = 1234 ;
 
-function sod(n){
-      if(n<10) return n 
-    
-return n%10 + sod (Math.floor(n/10))
-}
+// for(let i = Math.min(biggest,smallest); i>1 ; i--){
+//  if(biggest%i==0 && smallest%i==0){
+//      console.log(i);
+//      break ;
+//  }
+// }
 
-console.log(sod(n));
+// find prime number to the given number
+// let n = 30 ;
+// let arr = new Array(n+1).fill(true)
 
 
+// for(let i = 2 ; i<=Math.floor(Math.sqrt(n)) ; i++){
+//     if(arr[i]===true){
+//         for(let j = i*i ; j<=n ; j = j+i){
+//             arr[j] = false
+//         }
+//     }
+// }
 
+// for(let i = 2 ; i<arr.length; i++){
+//    if(arr[i]) console.log(i);
 
+// }
 
 
+// let n = 8 ;
+// let i =0 ;
+// for(; i*i<=n ; i++){
+//     if(i*i == n ) console.log(i);
 
+// }
+// console.log(i-1);
 
+// let n = 10;
+// let x = 2;
+// let ans = 1;
 
 
+// if (n < 0) {
+//     x = 1 / x
+//     n = -n
+// }
 
+// while (n > 0) {
+//     if (n % 2 == 1) {
+//         ans = ans * x;
+//     }
+//     x = x * x
+//     n = Math.floor(n / 2)
+// }
+// console.log(ans);
 
+// leetcode 50 ; pow(x,n)
 
+// let n = -2 ;
+// let x = 2 ;
 
+// function power(x , n){
 
+//     if(n<0) {
+//         x = 1/x ;
+//         n = -n
+//     }
+//     if(n==0) return 1 ;
 
+//     let half = power(x,Math.floor(n/2))
 
+//     if(n%2==0) {
+//        return half*half ;
+//     }
+//      return x*half*half;
+// }
 
+// console.log(power(x,n));
 
 
+// duplicate zero
+//  arr = [1,0,2,3,6,0,5,9]
+//  let count = 0 ;
+//  for(let i = 0 ; i<arr.length ; i++){
+//     if(arr[i]==0) count++
+//  }
 
 
+//  let i = arr.length-1;
+//  let j = arr.length-1+count ;
 
+// while(i!=j){
 
+//     if(arr.length>j){
+//         arr[j] = arr[i] ;  
+//     }
+//     j--
+//     if(arr[i]==0){
+//         if(j<arr.length){
+//         arr[j] = arr[i]
+//         }
+//         j--
+//     }
+//     i--
+// }
 
+// console.log(arr);
 
 
 
@@ -1265,67 +1351,365 @@ console.log(sod(n));
 
 
 
+//  new array questions
 
+// let arr1 = [1,2,3, 10]
+// let arr2 = [4,6,8 ]
 
+// let ans = new Array(arr1.length + arr2.length);
+// let i = 0;
+// let j = 0;
+// let k = 0;
 
+// while (i < arr1.length && j < arr2.length) {
 
+//     if (arr1[i] > arr2[j]) {
+//         ans[k] = arr2[j]
+//         j++;
+//         k++
+//     }
 
+//     else {
+//         ans[k] = arr1[i]
+//         i++;
+//         k++
+//     }
+// }
+// while (i < arr1.length) {
+//     ans[k] = arr1[i]
+//     k++;
+//     i++
+// }
+// while (j < arr2.length) {
+//     ans[k] = arr2[j]
+//     j++;
+//     k++;
+// }
 
 
+// console.log(ans);
 
 
+// leetcode merge sorted array
 
+// let nums1 = [1,2,3,0,0,0]
+// let nums2 = [2,5,6]
 
 
+// let m = 3 ; // arr1 actual length
+// let n = 3 ; // arr2 length
 
+// let i = m-1 ;
+// let j = n-1 ;
+// let k = m+n-1 ;
 
+// while(i>=0 && j>=0){
+//     if(nums1[i]>nums2[j]){
+//         nums1[k] = nums1[i]
+//         k--;
+//         i--
+//     }
+//     else{
+//         nums1[k] = nums2[j]
+//         k-- ;
+//         j-- ;
+//     }
+// }
+// while(j>=0){
+//     nums1[k] = nums2[j]
+//     k-- ;
+//     j-- ;
+// }
+// console.log(nums1);
 
+// leetcode remove dublicate from sorted array
 
+// let nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5];
+// let j = 1;
 
+// for (let i = 0; i < nums.length - 1; i++) {
+//     if (nums[i] != nums[i+1]) {
+//         nums[j] = nums[i+1]
+//         j++   ;
+//     }
+// }
 
 
+// console.log(nums, j);
 
 
+// maximum subarraay at array
 
+// let nums = [-3, -2, 0, -1];
 
+// let sum = 0;
+// let maxsum = nums[0]; // intiliaze first element cause if all the element is negative so it will not give zero 
 
+// for (let i = 0; i < nums.length; i++) {
+//    sum = nums[i] + sum;
 
+//    if (sum > maxsum) maxsum = sum;
 
+//    if (sum < 0) sum = 0;
 
 
+// }
 
+// console.log(maxsum);
 
+// leetcode 169. Majority Element / Boyer Moore's Voting Algo
 
 
+// let nums = [2,2,1,1,1,2,2];
+// let majority = nums[0] ;
+// let count = 1 ;
 
+// for(let i = 1 ; i<nums.length ; i++){
+// if(count==0){
+//    majority = nums[i] ;
+// }
 
+// if(majority == nums[i]) count++ ;
+// else{
+//    count-- ;
+// }
 
+// }
 
+// console.log(majority);
 
+// leetcode 121 : best time to buy and sell stock
 
+// let prices = [3, 2, 6, 1, 4];
+// let min = prices[0] ;
+// let currentprofit = 0 ;
+// let maxprofit = 0 ;
 
+// for(let i = 0; i<prices.length; i++){
 
+//    if(prices[i]<min) min = prices[i] ;
 
+//    currentprofit = prices[i]-min ;
+//    if(currentprofit>maxprofit) maxprofit = currentprofit ;
+// }
 
+// console.log(maxprofit);
 
 
 
+// leetcode sort the color
 
+// let   nums = [2,0,2,1,1,0] ;
+// let i = 0 ;
+// let j = 0 ;
+// let k = nums.length-1 ;
 
+// while(i<=k){
 
+//    if(nums[i]===0) {
+//       [nums[i],nums[j]] = [nums[j],nums[i]]
+//       i++ ;
+//       j++;
+//    }
 
+//   else if(nums[i]===2){
+//    [nums[i], nums[k]] = [nums[k], nums[i]] ;
+//       k-- ;
+//    }
+//  else {
+//    i++   
+//  }  
+// }
 
+// console.log(nums);
 
 
+// leetcode 42 : trapping rain water
 
+// let height =[0,1,0,2,1,0,1,3,2,1,2,1] ;
+// let left = new Array(height.length) ;
+// let right = new Array(height.length) ;
+// let lefthighest = 0 ;
+// let righthighest = 0 ;
+// let sum = 0 ;
 
+// for(let i = 0 ; i<height.length ; i++){
+//     lefthighest  = Math.max(height[i] , lefthighest)
+//     left[i] = lefthighest
+// }
 
+// for(let i = height.length-1 ; i>=0 ; i--){
+//     righthighest  = Math.max(height[i] , righthighest)
+//     right[i] = righthighest
+// }
 
+// for(let i = 0 ; i<height.length ; i++){
+//    sum += Math.min(left[i],right[i]) - height[i] 
 
+// }
 
 
+// console.log(left);
+// console.log(right);
+// console.log(sum);
 
 
+// leetcode 11 : container with most water
+
+// let  height = [1,8,6,2,5,4,8,3,7] ;
+// let i = 0 ;
+// let j = height.length-1 ;
+// let ans = 0 ;
+
+// while(i<j){
+//    ans = Math.max(ans , Math.min(height[i],height[j]) * (j - i))
+
+//    if(height[i]<height[j]) i++ ;
+//    else j-- ;
+// }
+
+// console.log(ans);
+
+
+
+// leetcode 2206 : divide array into equal pair
+
+// let nums = [2, 3, 2, 4, 3, 4, 2];
+// let map = new Map();
+// let count = 0;
+// let ispair = true;
+// for (let i = 0; i < nums.length; i++) {
+//    if (map.has(nums[i])) {
+//       map.set(nums[i], map.get(nums[i]) + 1)
+//    }
+//    else {
+//       map.set(nums[i], 1);
+//    }
+// }
+
+// let values = Array.from(map.values());
+
+// for (let i = 0; i < values.length; i++) {
+//    if (values[i] % 2 != 0) {
+//       ispair = false;
+//       break ;
+//    }
+// }
+
+// console.log(map, ispair);
+
+
+// leetcode 283 : moves zer0
+// let nums = [1,0 ,4,0,0,12,5] ;
+// let i = 0 ;
+// let j = i+1 ;
+
+// while(j<nums.length){
+//   if(nums[i]===0 && nums[j]!=0){
+//       [nums[i] , nums[j]] = [nums[j] , nums[i]] ;
+//       i++ ;
+//       j++ ;
+//    }
+//  else if(nums[i]!=0) {
+//    j++ ;
+//    i++ ;
+//  }
+
+//    else {
+//       j++ ;
+//    }
+
+// }
+
+// console.log(nums);
+
+
+
+// leetcode 2154. Keep Multiplying Found Values by Two
+
+// let nums = [8,28,4,2,15,3] ;
+// let original = 2 ;
+// let i = 0 ;
+// while(i<nums.length){
+//   if(nums[i]===original){
+//      original = original*2 ;
+//       i = 0 ;
+//   }
+//   else i++ ;
+// }
+
+// console.log(original);
+
+
+// leetcode 2057. Smallest Index With Equal Value
+
+// let  nums = [7,1,3,5,2,6,3,1,1,4,5,4,8,7,2,0,9,9,0,5,0,1,6] ;
+// for(let i =0 ;i<nums.length;i++){
+//     if(i%10===nums[i]){
+//        console.log(i);
+//              break ;
+//     }
+
+// }
+
+
+ // leetcode 2169. Count Operations to Obtain Zero
+
+//  let num1 = 2 ;
+//  let  num2 = 3 ;
+//  let Operations = 0 ;
+
+//  while(num1!=0 && num2!=0){
+      
+//     if(num1>=num2) num1 = num1-num2 ;
+//     else num2 = num2-num1 ;
+//        Operations++ ;
+//  }
+// console.log(Operations , num1);
+
+
+// letcode 15. 3Sum
+
+// let nums = [-1,0,1,2,-1,-4] ;
+// let temp = []
+// nums.sort((a,b)=>a-b) ;
+// for(let i = 0 ; i<nums.length;i++){
+//     let j = i+1 ;
+//     let k = nums.length-1 ;
+
+//     if(i!=0 && nums[i]==nums[i-1]) continue ;
+//    while(j<k){
+//       if(nums[i]+nums[j]+nums[k]==0){
+//         temp.push( [nums[i],nums[j],nums[k]]) ;
+//          j++ ;
+//        k-- ;
+          
+//       while(j<k && nums[j]===nums[j-1]) j++ ;
+//       while(j<k && nums[k]===nums[k+1]) k-- ;
+      
+//       }
+//       else if(nums[i]+nums[j]+nums[k]<0) j++ ;
+//       else  k-- ;
+
+//    }
+// }
+
+// console.log(temp);
+
+// leetcode 1732. Find the Highest Altitude
+
+// let gain = [-5,1,5,0,-7] ;
+// let start = 0 ;
+// for(let i = 0 ; i<gain.length;i++){
+//     start = start+(gain[i]) ;
+//      gain[i] = start ;
+// }
+// let maxalti = 0 ;
+// for(let i = 0 ; i<gain.length;i++){
+//     if(gain[i]>maxalti) maxalti = gain[i] ;
+// }
+
+// console.log(maxalti);
 
 
 
